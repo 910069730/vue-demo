@@ -1,0 +1,4 @@
+{
+    "presets": ["es2015"], //关键字
+    "plugins": ["transform-runtime"] //函数
+}

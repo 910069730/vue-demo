@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>信息管理系统</title>
+    <style>
+        .mui-toast-container .mui-toast-message{
+            font-size: 13px !important;
+            margin-bottom: 10px;
+        }
+    </style>
+<link href="/css/main.ef98a9.css" rel="stylesheet"></head>
+<body>
+    <div id="app"></div>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/mui/3.7.1/js/mui.min.js'></script>
+    <!-- <script>
+                mui.init({
+            keyEventBind: {
+                backbutton: true  //关闭back按键监听
+            }
+        });
+        // //首页返回键处理
+        // //处理逻辑：1秒内，连续两次按返回键，则退出应用；
+        var first = null;
+        mui.back = function() {
+            //首次按键，提示‘再按一次退出应用’
+            if (!first) {
+                first = new Date().getTime();//记录第一次按下回退键的时间
+                mui.toast('再按一次退出应用');//给出提示
+                // history.go(-1)//回退到上一页面
+                setTimeout(function() {//1s中后清除
+                    first = null;
+                }, 1000);
+            } else {
+                if (new Date().getTime() - first < 1000) {//如果两次按下的时间小于1s，
+                    plus.runtime.quit();//那么就退出app
+        } } };
+    </script> -->
+    <script>
+            mui.init({
+            keyEventBind: {
+                backbutton: true  //关闭back按键监听
+            }
+        });
+        var mui_old_back = mui.back; 
+var mui_is_switch = 1;
+mui.back = function(){
+    // alert(location.href);
+    var arr = location.href.split('#');
+    if(arr[1] == '/home' || arr[1] == '/comments' || arr[1] == '/shopcart' || arr[1] == '/talk'){
+        if(mui_is_switch == 1){
+            mui.toast("再按一次退出应用");
+            mui_is_switch = 2;
+        }else{
+            plus.runtime.quit();
+        }   
+    }else{
+        // alert(123)
+        mui_old_back();
+    }
+}
+    </script>
+<script type="text/javascript" src="/js/manifest.bafe83.js"></script><script type="text/javascript" src="/js/vendors.5063e8.js"></script><script type="text/javascript" src="/js/main.1ea531.js"></script></body>
+</html>

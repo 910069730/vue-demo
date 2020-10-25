@@ -1,0 +1,9 @@
+body{
+    background-color: #fff;
+}
+.mui-card-header:after, .mui-card-footer:before{
+    background-color:transparent;
+}
+.tmpl{
+    margin-bottom: 100px;
+}

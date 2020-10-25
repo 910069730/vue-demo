@@ -1,0 +1,30 @@
+{
+  "id": "2137297",
+  "name": "vue-demo",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "400102",
+      "name": "购物车",
+      "font_class": "htmal5icon29",
+      "unicode": "e641",
+      "unicode_decimal": 58945
+    },
+    {
+      "icon_id": "830344",
+      "name": "首页",
+      "font_class": "icon4",
+      "unicode": "e660",
+      "unicode_decimal": 58976
+    },
+    {
+      "icon_id": "1069760",
+      "name": "会员",
+      "font_class": "huiyuan",
+      "unicode": "e65d",
+      "unicode_decimal": 58973
+    }
+  ]
+}
